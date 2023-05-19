@@ -338,6 +338,20 @@ a_list = [1, 2, 3]
 2. ¿Qué sucede cuando ejecutas `a_tuple[2] = 5`?
 3. ¿Qué te dice `type(a_tuple)` sobre `a_tuple`?
 
+:::::::::::::::::::::::::::::: solution
+
+- ¿Qué sucede cuando ejecutas `a_list[1] = 5`?
+
+- ¿Qué sucede cuando ejecutas `a_tuple[2] = 5`?
+  
+  Como `tuple` es inmutable, no soporta asignación de ítems. Los elementos de `list` pueden ser alterados individualmente.
+
+- ¿Qué te dice `type(a_tuple)` sobre `a_tuple`?
+  
+  `tuple`
+  
+::::::::::::::::::::::::::::::
+
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Diccionarios
@@ -427,6 +441,27 @@ for key in rev.keys():
 2. Reasigna el segundo valor (parar el *par clave: valor*) para que ya no
   lea "dos" sino "manzana".
 3. Imprime el valor de `rev` en la pantalla nuevamente y ve si el valor ha cambiado.
+
+:::::::::::::::::::::::::::::: solution
+
+Asegúrate también de aclarar que acceder al "segundo valor" se trata del nombre de la clave. Agrega por ejemplo `rev[10] = "ten"` para aclarar que no se trata de la posición.
+
+```python
+rev
+```
+
+```output
+{1: 'one', 2: 'two', 3: 'three'}
+```
+
+```python
+rev[2] = "apple-sauce"
+```
+
+```output
+{1: 'one', 2: 'apple-sauce', 3: 'three'}
+```
+::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
